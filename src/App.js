@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { randomWord } from './components/words.js';
 
 function App() {
   return (
