@@ -1,91 +1,320 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    box-sizing:border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #0c0c13;
+    font-family:monospace;
+    background-color:gray;
+    color: white;
+}
+.container{
+    margin: 30 auto;
+    width: 100%;
+}
+.row{
+    display: block;
+    
+    
+}
+hr{
+    border:1px solid #cfcece;
+}
+.gameinfo{
+
+    font-size:13px;
+}
+.gameinfo .gamename{
+    width:100%;
+    text-align:center;
+    font-size:50px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    
+    
+}
+.gameinfo .category{
+    
+    text-align: center;
+    font-size: 20px;
+    
+}
+.gameinfo .category span{
+    font-weight:bold;
 }
 
-/*custom css*/
-
-:root {
-  --main-color: #07ffc9;
-  --error-color: #ff1100;
-  --secondary-color: #158cee;
-  --hash-color: #d6dfdf;
+.space{
+    height: 70px;
+    padding: 10px;
+    
+}
+.hangmandraw {
+    flex:1;
+    background-color: #ffffff87;
+    padding:10px;
+    height: 500px;
+    
+  
+}
+.hangmandraw .thedraw{
+    width:120px;
+    height: 80%;
+    border-bottom: 4px solid #222;
+    position: relative;
+    margin:auto;
+    left: -100px;
+    display: none;
+    
+    
 }
 
-.Hangman img {
-  width: 200px;
-  height: 350px;
+.hangmandraw .thestand{
+  content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #222;
+    height: 53%;
+    left:47%;
+    margin-left: -54px;
+    display: none;
+    border-bottom: 4px solid #222;
+
+}
+.thehang{
+    display: none;
 }
 
-.Hangman h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  padding-top: 0;
-  color: var(--secondary-color);
+.hangmandraw .thehang:before{
+  content: '';
+    position: absolute;
+    height: 4px;
+    background-color: #222;
+    width: 146px;
+    left:43.5%;
+    top:41%;
+    
+    
+  
+}
+.hangmandraw .thehang:after{
+   content: '';
+    position: absolute;
+    width: 4px;
+    height: 33px;
+    background-color: #222;
+    left:53%;
+    top:41%;
 }
 
-.Hangman-word {
-  letter-spacing: 1em;
-  margin: 0.4em -1em 0.2em 0;
-  font-size: 1.5rem;
-  color: var(--main-color);
+.hangmandraw  .theman .head {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #222;
+    position: absolute;
+    left: 50%;
+    top: 45.5%;
+    display: none;
+}
+.hangmandraw  .theman .body{
+    position: absolute;
+    background-color: #222;
+    width: 4px;
+    height: 200px;
+    top: 58%;
+    left: 53%;
+    display: none;
+}
+.hands{
+    display: none;
 }
 
-.Hangman-btns {
-  text-align: center;
-  color: var(--secondary-color);
-  display: inline-block;
-  font-size: 1.5rem;
+.hangmandraw  .theman .hands:before {
+
+    left: 85px;
+
+    transform: rotate(30deg)
 }
-.Hangman button {
-  border: none;
-  font-family: inherit;
-  font-size: 2.5rem;
-  cursor: pointer;
-  width: 5rem;
-  margin: 18px 8px 10px 13px;
-  letter-spacing: 0px;
-  outline: none;
-  background: var(--main-color);
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
-  padding-top: 15px;
+.hangmandraw  .theman .hands:after {
+    left: 130px;
+
+    transform: rotate(-30deg);
+    
 }
 
-.Hangman-reset {
-  color: var(--hash-color);
-  box-shadow: 0 6px var(--main-color) !important;
-  width: 10rem !important;
-  background-color: var(--main-color);
-  border-color: var(--main-color);
-  box-shadow: 0 0 40px var(--main-color);
-}
-.Hangman button:hover {
-  background-color: #fffffa;
+.hangmandraw  .theman .hands:before{
+    content: '';
+    width: 96px;
+    position: absolute;
+    height: 4px;
+    background-color: #222;
+    top:68%;
+    left:47.2%
 }
 
-.Hangman button:disabled {
-  color: var(--hash-color);
-  background-color: var(--error-color);
-  border-color: var(--error-color);
-  box-shadow: 0 0 40px var(--error-color);
+.hangmandraw  .theman .hands:after{
+    content: '';
+    width: 96px;
+    position: absolute;
+    height: 4px;
+    background-color: #222;
+    top:68%;
+    left:52.5%
 }
+
+
+.legs{
+    display: none;
+}
+.hangmandraw  .theman .legs:before {
+
+    left: 85px;
+
+    transform: rotate(-30deg)
+}
+.hangmandraw  .theman .legs:after {
+    left: 130px;
+
+    transform: rotate(30deg);
+    
+}
+
+.hangmandraw  .theman .legs:before{
+    content: '';
+    width: 96px;
+    position: absolute;
+    height: 4px;
+    background-color: #222;
+    top:89%;
+    left: 47.2%;
+}
+
+.hangmandraw  .theman .legs:after{
+    content: '';
+    width: 96px;
+    position: absolute;
+    height: 4px;
+    background-color: #222;
+    top:89%;
+    left:52.5%;
+}
+
+
+.hangmandraw.wrong-1 .thedraw{
+    display: block;
+}
+.hangmandraw.wrong-2 .thestand{
+    display: block;
+}
+.hangmandraw.wrong-3 .thehang{
+    display: block;
+}
+.hangmandraw.wrong-4 .head{
+    display: block;
+}
+.hangmandraw.wrong-5 .body{
+    display: block;
+}
+.hangmandraw.wrong-6 .hands{
+    display: block;
+}
+.hangmandraw.wrong-7 .legs{
+    display: block;
+}
+
+.letters{
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    
+}
+.letters .letter-box{
+    width: 45px;
+    height: 55px;
+    display: inline-block;
+    background-color: #ffffff87;
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    line-height: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+}
+.lettersguess{
+    margin: 10px auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 104px;
+    color: black;
+}
+.lettersguess span{
+    width: 45px;
+    height: 60px;
+    font-size: 24px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fdfdfd;
+    border-bottom: 3px solid #222;
+    transition: .3s;
+}
+span.with-space{
+    background: none; 
+    border-bottom: none;
+    position: relative;
+    
+}
+span.with-space:before{
+    content: ' ';
+    width: 20px;
+    height: 4px;
+    background-color: #222;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50% ,-50%);
+}
+
+.clicked {
+    background-color: #222;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.finished{
+    pointer-events: none;
+}
+.poup{
+    position: fixed;
+    background-color:#222;
+    padding: 100px 20px;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
