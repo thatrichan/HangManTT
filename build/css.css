@@ -207,10 +207,6 @@ hr{
 .hangmandraw.wrong-3 .thehang{
     display: block;
 }
-/*.hangmandraw.wrong-4 .therope{
-    display: block;
-}
-*/
 .hangmandraw.wrong-4 .head{
     display: block;
 }
@@ -234,7 +230,7 @@ hr{
     width: 45px;
     height: 55px;
     display: inline-block;
-    background-color: #15aba3;
+    background-color: #ffffff87;
     color: #fff;
     font-size: 24px;
     margin-right: 10px;
