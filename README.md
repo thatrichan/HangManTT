@@ -4,7 +4,7 @@
 We have build a hangman game using web technology that were taught to us in Tiktok Youth Camp. Our project consists of Javascript, HTML, CSS, and React and we have also implement animations to improve user experience, including upon clicking buttons and displaying hangman.
 
 ## Resulting image looks something like this:
-![game page](http://url/to/img.png)
+![game page](https://github.com/thatrichan/HangManTT/blob/e7f3ad90baace3f55fd91ddc99fdcf2c8332a378/src/images/page.png)
 
 ## Game Description
 The game is pretty simple. Player has to try to figure out an unknown word by guessing letters. If too many letters which do not appear in the word are guessed, the "hangman" is hanged and the game ends.
